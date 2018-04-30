@@ -53,7 +53,6 @@ do
         message="API UPDATE FAILED. DUMPING RESULTS:\n$update"
         log "$message"
         echo -e "$message"
-        exit 1
     else
         message="IP changed to: $ip"
         echo "$ip" > $ip_file
