@@ -33,7 +33,9 @@ do
         old_ip=$(cat $ip_file)
         if [ $ip == $old_ip ]; then
             echo "IP has not changed."
-            exit 0
+            sleep 600
+	    
+	    continue
         fi
     fi
 
