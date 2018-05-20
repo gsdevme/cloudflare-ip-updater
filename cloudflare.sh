@@ -33,7 +33,9 @@ do
         old_ip=$(cat $ip_file)
         if [ $ip == $old_ip ]; then
             echo "IP has not changed."
-            exit 0
+            sleep 600
+	    
+	    continue
         fi
     fi
 
@@ -53,7 +55,6 @@ do
         message="API UPDATE FAILED. DUMPING RESULTS:\n$update"
         log "$message"
         echo -e "$message"
-        exit 1
     else
         message="IP changed to: $ip"
         echo "$ip" > $ip_file
