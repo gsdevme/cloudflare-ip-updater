@@ -10,4 +10,4 @@ ENV CLOUDFLARE_AUTH_KEY 123456789
 ENV CLOUDFLARE_ZONE example.com
 ENV CLOUDFLARE_RECORD_NAME www.example.com
 
-ENTRYPOINT ["cloudflare.sh"]
+CMD /cloudflare.sh
